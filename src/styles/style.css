@@ -1,0 +1,110 @@
+.actor_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.637);
+  color: black;
+}
+.actor_modal div {
+  width: 50%;
+  background-color: white;
+  padding: 5%;
+}
+.actor_modal div img {
+  width: 30%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  background-color: rgb(31, 28, 28);
+  color: white;
+  position: relative;
+}
+
+button {
+  width: 20%;
+  height: 5vh;
+  padding: 0.5%;
+  margin: 5%;
+}
+
+.btn_show_actors {
+  display: none;
+}
+
+.btn_see_details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.637);
+  top: 150%;
+}
+.btn_see_details span {
+  border: 1px solid white;
+  color: white;
+  padding: 5px;
+  background-color: rgba(240, 248, 255, 0.473);
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  list-style: none;
+}
+ul .actors_card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 100%;
+  height: 25vh;
+  padding: 5%;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+}
+ul .actors_card:hover {
+  font-size: large;
+  transition: all 0.5s;
+}
+ul .actors_card:hover .btn_see_details {
+  animation: btn-details-animation 2s ease forwards;
+}
+@media (min-width: 720px) {
+  ul .actors_card {
+    width: 39%;
+  }
+}
+@media (min-width: 960px) {
+  ul .actors_card {
+    width: 23%;
+  }
+}
+
+@keyframes btn-details-animation {
+  to {
+    top: 0%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
